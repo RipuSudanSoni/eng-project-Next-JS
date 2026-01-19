@@ -1,0 +1,10 @@
+@import "../styles/markdown.css";
+
+html {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}

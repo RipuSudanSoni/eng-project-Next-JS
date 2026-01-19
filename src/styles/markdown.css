@@ -1,0 +1,109 @@
+.markdown-body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #1f2937;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Headings */
+.markdown-body h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 10px;
+}
+
+.markdown-body h2 {
+  font-size: 26px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  border-left: 5px solid #2563eb;
+  padding-left: 12px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph */
+.markdown-body p {
+  margin-bottom: 16px;
+}
+
+/* Lists */
+.markdown-body ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.markdown-body li {
+  margin-bottom: 8px;
+}
+
+/* Images */
+.markdown-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Tables */
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.markdown-body th {
+  background-color: #2563eb;
+  color: white;
+}
+
+.markdown-body tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Blockquote */
+.markdown-body blockquote {
+  border-left: 5px solid #2563eb;
+  background: #f1f5f9;
+  padding: 15px;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+/* Code */
+.markdown-body pre {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown-body code {
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* TOC style */
+.markdown-body ul:first-of-type {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}

@@ -1,0 +1,191 @@
+/* =========================
+   HEADER CONTAINER
+========================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(90deg, #0f172a, #020617);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+}
+
+/* =========================
+   HORIZONTAL SCROLL
+========================= */
+.nav-scroll {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.nav-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.nav-scroll::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+/* =========================
+   NAV LIST
+========================= */
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 10px 20px;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+/* =========================
+   NAV ITEMS
+========================= */
+.nav-item {
+  position: relative;
+}
+
+/* Main links */
+.nav-link,
+.nav-item a {
+  color: #e5e7eb;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 4px;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-item a:hover {
+  color: #38bdf8;
+}
+
+/* =========================
+   DROPDOWN TOGGLE
+========================= */
+.nav-item-with-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: orange;
+  font-size: 22px;
+  padding: 4px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-toggle:hover {
+  color: #38bdf8;
+  transform: rotate(180deg);
+}
+
+/* =========================
+   PORTAL DROPDOWN
+========================= */
+.portal-dropdown {
+  position: absolute;
+  z-index: 99999;
+  animation: fadeSlide 0.25s ease;
+}
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+.dropdown-menu {
+  background: #020617;
+  min-width: 200px;
+  border-radius: 10px;
+  padding: 6px 0;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.65);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 14px;
+  color: #e5e7eb;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.dropdown-menu li a:hover {
+  background: #0f172a;
+  color: #38bdf8;
+}
+
+/* =========================
+   MOBILE BACKDROP
+========================= */
+.dropdown-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 99998;
+}
+
+/* =========================
+   SMALL ANIMATION
+========================= */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* =========================
+   MOBILE TOGGLE BUTTON
+========================= */
+
+ /* need to check unused css */
+.mobile-toggle-bar {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  background: #020617;
+}
+ /* need to check unused css */
+.mobile-toggle-bar button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+.mobile-toggle-container {
+  background: #3259ff;
+  padding: 9px;
+  position: fixed;
+  width: 40px;
+  border-radius: 15%;
+  margin-top: 2px;
+}
+
+.mobile-menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
