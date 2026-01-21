@@ -47,5 +47,12 @@ export const sidebarConfig = {
       { id: "Options_A2_H1", label: "Options A2 H1" },
       { id: "Options_A2_H2", label: "Options A2 H2" },
     ],
+
+     options7: [
+      { id: "Options_7_H", label: "Options 7 H" },
+      { id: "Options_7_H1", label: "Options 7 H1" },
+      { id: "Options_7_H2", label: "Options 7 H2" },
+      { id: "Options_7_H3", label: "Options 7 H3" },
+     ],
   },
 };
