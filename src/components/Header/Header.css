@@ -1,3 +1,5 @@
+/* @import "@globals.css"; */
+
 /* =========================
    HEADER CONTAINER
 ========================= */
@@ -5,7 +7,9 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(90deg, #0f172a, #020617);
+  /* background: linear-gradient(90deg, #0f172a, #020617); */
+  background: var(--color-bg-header);
+  box-shadow: var(--shadow-soft);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(6px);
 }
@@ -50,7 +54,8 @@
 /* Main links */
 .nav-link,
 .nav-item a {
-  color: #e5e7eb;
+  /* color: #e5e7eb; */
+  color: var(--color-text-normal);
   font-size: 15px;
   font-weight: 500;
   text-decoration: none;
@@ -60,7 +65,22 @@
 
 .nav-link:hover,
 .nav-item a:hover {
-  color: #38bdf8;
+  /* color: #38bdf8; */
+  color: var(--color-text-hover);
+  background: var(--color-bg-hover);
+  transform: translateY(-2px) scale(1.03);
+  text-shadow: 0 4px 12px rgba(56,189,248,0.4);
+}
+
+.active-nav > .nav-link {
+  color: var(--color-text-active);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(56,189,248,0.6);
+}
+
+.active-child {
+  color: var(--color-text-active);
+  background: linear-gradient(90deg, transparent, var(--color-accent-soft));
 }
 
 /* =========================

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import DropdownPortal from "./DropdownPortal";
 import { HeaderMenuItem } from "@/data/headerMenu";
+import { usePathname } from "next/navigation";
 
 interface Props {
   item: HeaderMenuItem;
@@ -25,9 +26,20 @@ export default function HeaderItem({
 }: Props) {
   const hasDropdown = !!item.children?.length;
 
+  const pathname = usePathname();
+
+  /* ✅ Active logic: parent OR child active */
+  const isChildActive = item.children?.some(
+    (child) => pathname === child.href
+  );
+
+  const isActive = pathname === item.href || isChildActive;
+
   return (
     <li
-      className={`nav-item ${hasDropdown ? "nav-item-with-dropdown" : ""}`}
+      className={`nav-item ${hasDropdown ? "nav-item-with-dropdown" : ""} ${
+        isActive ? "active-nav" : ""
+      }`}
       onMouseLeave={!isMobile ? closeDropdown : undefined}
     >
       <Link
@@ -65,16 +77,21 @@ export default function HeaderItem({
               isMobile={isMobile}
             >
               <ul className="dropdown-menu">
-                {item.children!.map((child) => (
-                  <li key={child.href}>
-                    <Link
-                      href={child.href}
-                      onClick={() => onNavigate(item.sidebarTopic)}
-                    >
-                      {child.label}
-                    </Link>
-                  </li>
-                ))}
+                {item.children!.map((child) => {
+                  const isChildCurrent = pathname === child.href;
+
+                  return (
+                    <li key={child.key}>
+                      <Link
+                        href={child.href}
+                        className={isChildCurrent ? "active-child" : ""}
+                        onClick={() => onNavigate(item.sidebarTopic)}
+                      >
+                        {child.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </DropdownPortal>
           )}

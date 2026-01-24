@@ -5,7 +5,7 @@ import { useMobileSidebar } from "@/context/MobileSidebarContext";
 import "./sidebar.css";
 
 type Section = "grammar";
-type Page = "leftsidebar_grammar" | "option_A";
+type Page = "leftsidebar_grammar" | "option_A" | "option7" | "option4";
 
 export default function Sidebar({
   section,
@@ -29,10 +29,15 @@ export default function Sidebar({
     currentPage = "option_A";
   }
 
-  // if (activeTopic === "options7") {
-  //   currentSection = "grammar"; // change if needed
-  //   currentPage = "options7";
-  // }
+  if (activeTopic === "option7") {
+    currentSection = "grammar"; // change if needed
+    currentPage = "option7";
+  }
+
+  if (activeTopic === "option4") {
+    currentSection = "grammar"; // change if needed
+    currentPage = "option4";
+  }
 
   const items = sidebarConfig[currentSection][currentPage];
 

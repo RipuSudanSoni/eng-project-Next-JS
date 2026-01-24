@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -23,6 +23,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* ===== Website Common Theme ===== */
+
+  /* Backgrounds */
+  --color-bg-header: #020617;
+  --color-bg-dropdown: #020617;
+  --color-bg-hover: #0f172a;
+
+  /* Text */
+  --color-text-normal: #cbd5f5;
+  --color-text-active: #38bdf8;
+  --color-text-hover: #7dd3fc;
+
+  /* Accent */
+  --color-accent: #38bdf8;
+  --color-accent-soft: rgba(56, 189, 248, 0.25);
+
+  /* Shadow */
+  --shadow-soft: 0 8px 25px rgba(0,0,0,0.45);
+  --shadow-3d: 0 12px 30px rgba(0,0,0,0.6);
+
+  /* Border */
+  --border-soft: rgba(255,255,255,0.08);
 }
 
 
