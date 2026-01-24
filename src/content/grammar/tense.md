@@ -199,7 +199,7 @@ Learning **tenses** is very important for speaking correct English.
 
 ---
 
-## 1️⃣ What is Tense?
+## What is Tense? {#what-is-tense}
 
 **Tense tells us the time of an action.**  
 Tense हमें बताता है कि काम:
@@ -216,9 +216,12 @@ Example:
 
 ---
 
-## 2️⃣ Present Tense
+## Present Tense {#present-tense}
+<!-- ## Present Tense -->
 
-### ✅ A. Present Simple Tense
+<!-- ### ✅ A. Use of Present Simple Tense in spoken English. -->
+<!-- ### Use of Present Simple Tense {#present-simple-use} -->
+### ✅ A. Use of Present Simple Tense in spoken English {#present-simple-use}
 
 **Use:**  
 - Daily habits  

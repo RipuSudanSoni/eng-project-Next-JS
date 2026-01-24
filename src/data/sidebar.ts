@@ -8,8 +8,13 @@ export const sidebarConfig = {
       { id: "use-of-grammar", label: "use of grammar" },
       { id: "way-to-learn-of-grammar", label: "way to learn of grammar" },
 
-      // noun
+      // tense
+      { id: "tenses-in-spoken-english", label: "Tenses in Spoken English"},
+      { id: "what-is-tense", label: "What is Tense"},
       { id: "present-tense", label: "Present Tense" },
+      { id: "present-simple-use", label: "Present Simple Tense" },
+      { id: "present-continuous-tense", label: "Present Continuous Tense" },
+      { id: "present-perfect-tense", label: "Present Perfect Tense" },
       { id: "past-tense", label: "Past Tense" },
       { id: "future-tense", label: "Future Tense" },
 
