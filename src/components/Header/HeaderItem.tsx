@@ -4,6 +4,7 @@ import Link from "next/link";
 import DropdownPortal from "./DropdownPortal";
 import { HeaderMenuItem } from "@/data/headerMenu";
 import { usePathname } from "next/navigation";
+import { useRef } from "react";
 
 interface Props {
   item: HeaderMenuItem;
@@ -29,11 +30,19 @@ export default function HeaderItem({
   const pathname = usePathname();
 
   /* ✅ Active logic: parent OR child active */
-  const isChildActive = item.children?.some(
-    (child) => pathname === child.href
-  );
+  const isChildActive = item.children?.some((child) => pathname === child.href);
 
   const isActive = pathname === item.href || isChildActive;
+
+  const itemRef = useRef<HTMLLIElement>(null);
+
+  const scrollIntoView = () => {
+    itemRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  };
 
   return (
     <li
@@ -45,7 +54,10 @@ export default function HeaderItem({
       <Link
         href={item.href}
         className="nav-link"
-        onClick={() => onNavigate(item.sidebarTopic)}
+        onClick={() => {
+          onNavigate(item.sidebarTopic);
+          scrollIntoView();
+        }}
       >
         {item.label}
       </Link>
@@ -58,11 +70,9 @@ export default function HeaderItem({
               openDropdown(item.key, e.currentTarget.getBoundingClientRect())
             }
             onMouseEnter={
-              !isMobile
-                ? (e) =>
-                    openDropdown(
+              !isMobile ? (e) => openDropdown(
                       item.key,
-                      e.currentTarget.getBoundingClientRect()
+                      e.currentTarget.getBoundingClientRect(),
                     )
                 : undefined
             }
@@ -81,11 +91,14 @@ export default function HeaderItem({
                   const isChildCurrent = pathname === child.href;
 
                   return (
-                    <li key={child.key}>
+                    <li ref={itemRef} key={child.key}>
                       <Link
                         href={child.href}
                         className={isChildCurrent ? "active-child" : ""}
-                        onClick={() => onNavigate(item.sidebarTopic)}
+                        onClick={() => {
+                          onNavigate(item.sidebarTopic);
+                          scrollIntoView();
+                        }}
                       >
                         {child.label}
                       </Link>
