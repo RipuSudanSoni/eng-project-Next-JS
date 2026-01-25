@@ -11,8 +11,19 @@ export default function MobileSidebarDrawer() {
       {open && (
         <div className="mobile-backdrop" onClick={() => setOpen(false)} />
       )}
-
+      
       <div className={`mobile-sidebar ${open ? "open" : ""}`}>
+        <div className="sidebar-header">
+          <span>Menu</span>
+          <button
+            onClick={() => setOpen(false)}
+            className="close-btn"
+            aria-label="Close sidebar"
+          >
+            ✕
+          </button>
+        </div>
+
         <Sidebar section="grammar" page="leftsidebar_grammar" />
       </div>
     </>

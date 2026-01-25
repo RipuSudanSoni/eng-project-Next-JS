@@ -11,7 +11,7 @@ export default function Header() {
   const [anchorRect, setAnchorRect] = useState<DOMRect | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
-  const { setOpen, setActiveTopic } = useMobileSidebar();
+  const { open, setOpen, setActiveTopic } = useMobileSidebar();
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth <= 1024);
@@ -64,12 +64,13 @@ export default function Header() {
       {/* ===== MOBILE SIDEBAR TOGGLE ===== */}
       {isMobile && (
         <div className="mobile-toggle-container">
+
           <button
-            className="mobile-menu-btn"
-            onClick={() => setOpen(true)}
-            aria-label="Open Sidebar"
+            className={`mobile-menu-btn ${open ? "open" : ""}`}
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle Sidebar"
           >
-            ☰
+            {open ? "✕" : "☰"}
           </button>
         </div>
       )}
