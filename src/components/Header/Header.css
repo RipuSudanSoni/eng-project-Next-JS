@@ -194,20 +194,60 @@
   cursor: pointer;
 }
 
-
 .mobile-toggle-container {
-  background: #3259ff;
-  padding: 9px;
   position: fixed;
-  width: 40px;
-  border-radius: 15%;
-  margin-top: 2px;
+  top: 60px;    
+  left: 1px;
+  z-index: 9999;
 }
 
+/* 
+.mobile-toggle-container {
+  position: fixed;
+  top: 64px;
+  right: 5px;
+  z-index: 99999;
+} */
+
 .mobile-menu-btn {
-  background: transparent;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   border: none;
-  color: white;
-  font-size: 22px;
   cursor: pointer;
+
+  font-size: 22px;
+  color: white;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    background 0.4s ease;
+
+  box-shadow:
+    0 0 10px rgba(56,189,248,0.6),
+    0 0 20px rgba(56,189,248,0.4);
+}
+
+/* Hover glow */
+.mobile-menu-btn:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 14px rgba(56,189,248,0.9),
+    0 0 30px rgba(56,189,248,0.7);
+}
+
+/* Open state animation */
+.mobile-menu-btn.open {
+  transform: rotate(180deg) scale(1.1);
+  background: linear-gradient(135deg, #ef4444, #fb7185);
+
+  box-shadow:
+    0 0 14px rgba(239,68,68,0.9),
+    0 0 30px rgba(239,68,68,0.7);
 }
