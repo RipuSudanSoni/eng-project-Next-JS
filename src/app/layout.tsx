@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header/Header";
-import { MobileSidebarProvider } from '@/context/MobileSidebarContext';
+import { MobileSidebarProvider } from "@/context/MobileSidebarContext";
+import BrandingBar from "@/components/BrandingBar/BrandingBar";
 
 export default function RootLayout({
   children,
@@ -12,8 +13,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <MobileSidebarProvider>
-          <Header />
-          {children}
+            <BrandingBar />
+            <Header />
+            {children}
         </MobileSidebarProvider>
       </body>
     </html>

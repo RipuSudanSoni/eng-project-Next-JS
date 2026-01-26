@@ -1,0 +1,60 @@
+.branding-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2px 24px;
+
+  background: linear-gradient(135deg, #f8fbff, #eef4ff);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+
+  position: relative;
+  z-index: 1001;
+}
+
+/* Center container */
+.branding-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Logo */
+.branding-logo {
+  height: 42px;
+  width: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Brand text */
+.branding-text {
+  font-size: 20px;
+  font-weight: 800;
+
+  background: linear-gradient(90deg, #2563eb, #06b6d4, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 0.4px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* Hover effect */
+.branding-left:hover .branding-logo {
+  transform: rotate(-6deg) scale(1.08);
+  transition: 0.3s ease;
+}
+
+/* Mobile optimization */
+@media (max-width: 640px) {
+  .branding-logo {
+    height: 28px;
+  }
+
+  .branding-text {
+    font-size: 14px;
+  }
+}

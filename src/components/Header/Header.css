@@ -5,7 +5,8 @@
 ========================= */
 .header {
   position: sticky;
-  top: 0;
+  /* top: 0; */
+  top: 48px;
   z-index: 1000;
   /* background: linear-gradient(90deg, #0f172a, #020617); */
   background: var(--color-bg-header);
@@ -196,23 +197,17 @@
 
 .mobile-toggle-container {
   position: fixed;
-  top: 60px;    
+  top: 100px;    
   left: 1px;
   z-index: 9999;
 }
 
-/* 
-.mobile-toggle-container {
-  position: fixed;
-  top: 64px;
-  right: 5px;
-  z-index: 99999;
-} */
-
 .mobile-menu-btn {
-  width: 44px;
+  width: 26px;
   height: 44px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  border-top-right-radius: 25%;
+  border-bottom-right-radius: 25%;
   border: none;
   cursor: pointer;
 
