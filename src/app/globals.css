@@ -64,8 +64,10 @@ body {
 .layout { 
   display: flex; 
   gap: 20px;
-  height: calc(100vh - 80px); /* header height */
+  height: calc(100vh - 130px);
   overflow: hidden;
+  display: flex;
+  gap: 20px;
 }
 
 .sidebar-col { 
@@ -93,7 +95,7 @@ body {
     display: none; 
   }
 
-  .content-col { 
-    width: 100%; 
+  .content-col {
+    width: 100%;
   }
 }
