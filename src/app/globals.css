@@ -1,34 +1,5 @@
 @import "tailwindcss";
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-} */
-
-html, body {
-  height: 100%;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 
 :root {
   --background: #ffffff;
@@ -58,44 +29,90 @@ body {
   --border-soft: rgba(255,255,255,0.08);
 }
 
-
-/* ================================= */
-
-.layout { 
-  display: flex; 
-  gap: 20px;
-  height: calc(100vh - 130px);
-  overflow: hidden;
-  display: flex;
-  gap: 20px;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
-.sidebar-col { 
-  width: 20%;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 1. बॉडी सेटअप - पूरी स्क्रीन को लॉक करें */
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+}
+
+/* 2. मुख्य रैपर जो हेडर के नीचे की जगह लेगा */
+.scrollable-container {
+  height: calc(100vh - 100px); /* हेडर/ब्रांडिंग बार की ऊंचाई के अनुसार */
+  overflow: hidden; 
+  display: flex;
+}
+
+/* 3. मुख्य लेआउट - यह स्क्रॉल नहीं होगा */
+.main-layout-container {
+  display: flex;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.content-col { 
+/* 4. SIDEBAR & ADS - स्वतंत्र स्क्रॉल (Independent Scroll) */
+.sidebar-col-fixed, 
+.ads-col-fixed {
+  width: 20%;
+  height: 100%;
+  overflow-y: auto; /* खुद का स्क्रॉलिंग */
+  background: #020617;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+.ads-col-fixed {
+  background: #f9fbff;
+  border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+/* 5. CONTENT SCROLL AREA - यही असली स्क्रॉलिंग करेगा */
+.content-scroll-area {
   width: 60%;
   height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow-y: auto; /* सिर्फ यही कॉलम स्क्रॉल होगा */
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
 }
 
-.ads-col { 
-  width: 20%;
-  height: 100%;
-  overflow: hidden;
+/* 6. कंटेंट के अंदर का हिस्सा */
+.content-inner-wrapper {
+  flex: 1; /* यह सुनिश्चित करेगा कि फुटर हमेशा नीचे रहे */
+  padding: 30px;
 }
 
+/* 7. FULL WIDTH FOOTER - अब यह 100% चौड़ाई लेगा */
+.full-width-footer {
+  width: 100%;
+  background: #020617; /* या आपका नीला रंग #98a9f6 */
+  flex-shrink: 0;
+}
+
+/* मोबाइल के लिए */
 @media (max-width: 1024px) {
-  .sidebar-col, 
-  .ads-col { 
-    display: none; 
-  }
-
-  .content-col {
-    width: 100%;
-  }
+  .sidebar-col-fixed, .ads-col-fixed { display: none; }
+  .content-scroll-area { width: 100%; }
 }

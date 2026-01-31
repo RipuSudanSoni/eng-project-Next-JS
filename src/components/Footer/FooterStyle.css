@@ -1,0 +1,38 @@
+    .footer {
+    width: 100%;
+    padding: 40px 20px;
+    background: #98a9f6;
+    color: #fff;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: auto; /* फुटर को हमेशा नीचे रखने के लिए */
+    }
+
+
+    .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 20px;
+    text-align: center;
+    }
+
+
+    .footer-text {
+    font-size: 14px;
+    font-weight: 500;
+    }
+
+    .footer-subtext {
+    font-size: 13px;
+    margin-top: 4px;
+    color: #7dd3fc;
+    }
+
+    @media (max-width: 640px) {
+    .footer-inner {
+        padding: 12px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+    }
+    }
