@@ -1,21 +1,20 @@
-import type { Metadata } from "next";
-import "./globals.css";
 import Header from "@/components/Header/Header";
-import { MobileSidebarProvider } from "@/context/MobileSidebarContext";
 import BrandingBar from "@/components/BrandingBar/BrandingBar";
+import { MobileSidebarProvider } from "@/context/MobileSidebarContext";
+import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
         <MobileSidebarProvider>
+          <div className="main-wrapper">
             <BrandingBar />
             <Header />
-            {children}
+            <div className="scrollable-container">
+               {children}
+            </div>
+          </div>
         </MobileSidebarProvider>
       </body>
     </html>
