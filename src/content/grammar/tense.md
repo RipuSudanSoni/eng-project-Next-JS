@@ -1,184 +1,9 @@
-<!-- # Tenses in Spoken English  
-## Examples, Uses & Easy Explanation (For Hindi Learners)
-
-Learning **Tense** is the most important part of **Spoken English**.  
-अगर आपको Tense समझ आ गया, तो आप **90% English बोल सकते हैं** ✅
-
 ---
-
-## 📚 Table of Contents
-1. What is Tense?
-2. Types of Tenses
-3. Present Tense (With Examples)
-4. Past Tense (With Examples)
-5. Future Tense (With Examples)
-6. Daily Use Sentence Table
-7. Common Mistakes (Hindi Learners)
-8. Practice Tips
-
+title: Tenses in Spoken English
+description: Learn all English tenses with easy explanation and daily use examples for Hindi speakers.
+slug: tenses
+category: grammar
 ---
-
-## 1️⃣ What is Tense?
-
-**Tense** tells us **time of action**.
-
-👉 Action **कब हुआ है**, यह Tense बताता है।
-
-### Example:
-- I **eat** food. (Present)
-- I **ate** food. (Past)
-- I **will eat** food. (Future)
-
----
-
-## 2️⃣ Types of Tenses (Simple Understanding)
-
-| Tense Type | Meaning (Hindi) | Example |
-|----------|----------------|--------|
-| Present | अभी / रोज़ | I work |
-| Past | बीते समय में | I worked |
-| Future | आने वाले समय में | I will work |
-
----
-
-## 3️⃣ Present Tense (सबसे ज़्यादा उपयोग होता है)
-
-### ✅ Use:
-- Daily habits  
-- General truth  
-- Routine actions  
-
-### Structure:
-**Subject + Verb (base / s)**
-
-### Examples:
-- I **go** to office daily.  
-- She **likes** coffee.  
-- We **speak** English at home.
-
-👉 Hindi Trick:  
-अगर वाक्य के अंत में **"हूँ / हो / है / हैं"** आता है → अक्सर **Present Tense**
-
----
-
-### 🔹 Present Continuous Tense
-
-**Use:**  
-Action अभी चल रहा है (अभी-अभी)
-
-**Structure:**  
-Subject + is / am / are + Verb + ing
-
-Examples:
-- I **am learning** English.  
-- She **is cooking** food.  
-- They **are watching** TV.
-
-👉 Hindi:  
-"रहा हूँ / रही है / रहे हैं"
-
----
-
-## 4️⃣ Past Tense (बीते समय के लिए)
-
-### 🔹 Simple Past Tense
-
-**Use:**  
-Action पहले हो चुका है।
-
-**Structure:**  
-Subject + Verb (past form)
-
-Examples:
-- I **went** to market.  
-- He **called** me yesterday.  
-- We **learned** English last year.
-
-👉 Hindi पहचान:  
-"था / थी / थे"
-
----
-
-### 🔹 Past Continuous Tense
-
-**Use:**  
-Past में action चल रहा था।
-
-Examples:
-- I **was studying** English.  
-- They **were playing** cricket.
-
----
-
-## 5️⃣ Future Tense (आने वाला समय)
-
-### 🔹 Simple Future Tense
-
-**Use:**  
-जो काम आगे होगा।
-
-**Structure:**  
-Subject + will + verb
-
-Examples:
-- I **will speak** English fluently.  
-- She **will join** the class tomorrow.
-
-👉 Hindi:  
-"करूँगा / करूँगी"
-
----
-
-## 6️⃣ Daily Use Spoken English Sentences
-
-| Hindi Sentence | English Sentence |
-|---------------|-----------------|
-मैं अभी सीख रहा हूँ | I am learning now |
-वह रोज़ आता है | He comes daily |
-मैं कल जाऊँगा | I will go tomorrow |
-हमने खाना खा लिया | We ate food |
-
----
-
-## 7️⃣ Common Mistakes (Hindi Learners)
-
-❌ I am go market  
-✅ I am **going** to market  
-
-❌ He eat food  
-✅ He **eats** food  
-
-👉 याद रखें:  
-**Helping verb + Verb (ing)** ज़रूरी है।
-
----
-
-## 8️⃣ Practice Tips (Very Important)
-
-✔️ रोज़ 5 वाक्य बोलें  
-✔️ पहले Hindi सोचें → फिर English  
-✔️ Mobile पर खुद की आवाज़ रिकॉर्ड करें  
-✔️ Grammar से मत डरिए 😄
-
----
-
-## 🎯 Final Advice
-
-अगर आप Tense समझ गए,  
-तो **Spoken English अपने-आप आसान हो जाएगी** 🚀  
-
-👉 Practice is the key!
-
--->
-
-
-
-
-
-<!-- =============================================================================== -->
-
-
-
 
 
 # Tenses in Spoken English  
@@ -198,8 +23,7 @@ Learning **tenses** is very important for speaking correct English.
 6. Daily Speaking Tips
 
 ---
-
-## What is Tense? {#what-is-tense}
+## What is Tense?
 
 **Tense tells us the time of an action.**  
 Tense हमें बताता है कि काम:
@@ -216,12 +40,11 @@ Example:
 
 ---
 
-## Present Tense {#present-tense}
-<!-- ## Present Tense -->
+## Present Tense
 
-<!-- ### ✅ A. Use of Present Simple Tense in spoken English. -->
-<!-- ### Use of Present Simple Tense {#present-simple-use} -->
-### ✅ A. Use of Present Simple Tense in spoken English {#present-simple-use}
+
+
+### ✅ A. Use of Present Simple Tense in spoken English
 
 **Use:**  
 - Daily habits  

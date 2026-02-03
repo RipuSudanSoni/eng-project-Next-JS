@@ -12,7 +12,7 @@ export default function layout({
     <>
       <MobileSidebarDrawer />
       <Layout3Column
-        sidebar={<Sidebar section="grammar" page="option4" />}
+        // sidebar={<Sidebar section="grammar" page="option4" />}
         content={children}
       />
     </>

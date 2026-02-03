@@ -101,7 +101,7 @@ html, body {
 /* 6. कंटेंट के अंदर का हिस्सा */
 .content-inner-wrapper {
   flex: 1; /* यह सुनिश्चित करेगा कि फुटर हमेशा नीचे रहे */
-  padding: 30px;
+  padding: 5px;
 }
 
 /* 7. FULL WIDTH FOOTER - अब यह 100% चौड़ाई लेगा */

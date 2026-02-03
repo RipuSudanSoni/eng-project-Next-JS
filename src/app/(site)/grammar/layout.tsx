@@ -1,9 +1,9 @@
-
 import Layout3Column from "@/components/Layout3Column/Layout3Column";
 import MobileSidebarDrawer from "@/components/Sidebar/MobileSidebarDrawer";
 import Sidebar from "@/components/Sidebar/Sidebar";
+// import "@/styles/globalStyle.css";
 
-export default function Option7layout({
+export default function GrammarLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -12,7 +12,7 @@ export default function Option7layout({
     <>
       <MobileSidebarDrawer />
       <Layout3Column
-        sidebar={<Sidebar section="grammar" page="option7" />}
+        sidebar={<Sidebar section="grammar" page="leftsidebar_grammar" />}
         content={children}
       />
     </>

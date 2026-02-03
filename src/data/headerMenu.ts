@@ -28,6 +28,12 @@ export const headerMenu: HeaderMenuItem[] = [
     ],
   },
   {
+    key: "start-speaking",
+    label: "Start Speaking",
+    href: "/start-speaking",
+    sidebarTopic: "startSpeaking",
+  },
+  {
     key: "optionA",
     label: "Option A",
     href: "/options-A",
@@ -85,5 +91,4 @@ export const headerMenu: HeaderMenuItem[] = [
     label: "Option 11",
     href: "/options11",
   },
-  
 ];

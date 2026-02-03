@@ -1,18 +1,19 @@
+import type { ReactNode } from "react";
 import Layout3Column from "@/components/Layout3Column/Layout3Column";
 import MobileSidebarDrawer from "@/components/Sidebar/MobileSidebarDrawer";
 import Sidebar from "@/components/Sidebar/Sidebar";
-import "@/styles/globalStyle.css";
+// import SidebarLayout from "@/components/SidebarLayout";
 
-export default function GrammarLayout({
+export default function StartSpeakingLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <>
-      <MobileSidebarDrawer />
+     <MobileSidebarDrawer />
       <Layout3Column
-        sidebar={<Sidebar section="grammar" page="leftsidebar_grammar" />}
+        sidebar={<Sidebar section="startSpeaking" page="leftsidebar_startSpeaking" />}
         content={children}
       />
     </>
