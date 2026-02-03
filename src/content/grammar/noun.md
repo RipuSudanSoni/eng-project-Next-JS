@@ -26,7 +26,7 @@ A noun is one of the most important parts of English grammar. It helps us name p
 
 ---
 
-## What is a Noun? {#what-is-noun}
+## What is a Noun?
 
 A noun is a word that names a **person, place, thing, animal, or idea**.
 
@@ -47,7 +47,7 @@ A noun is a word that names a **person, place, thing, animal, or idea**.
 
 ---
 
-## Types of Noun {#types-of-noun}
+## Types of Noun
 
 There are mainly 8 types of nouns in English grammar.
 
@@ -152,7 +152,7 @@ Examples:
 
 ---
 
-## Examples of Noun {#examples-of-noun}
+## Examples of Noun
 
 ### Sentence examples
 
@@ -165,7 +165,7 @@ Examples:
 
 ---
 
-## Rules of Using Noun {#rules-of-noun}
+## Rules of Using Noun
 
 1. Proper nouns always start with capital letters.
 2. Singular noun → use **a/an**  
@@ -175,7 +175,7 @@ Examples:
 
 ---
 
-## Common Mistakes {#common-mistakes}
+## Common Mistakes
 
 ❌ She have informations  
 ✅ She has information  
@@ -185,7 +185,7 @@ Examples:
 
 ---
 
-## Practice Questions {#practice-questions}
+## Practice Questions
 
 1. Identify nouns in the sentence:  
    "Ravi plays football in the park."
@@ -198,7 +198,7 @@ Examples:
 
 ---
 
-## FAQ {#faq}
+## FAQ
 
 ### What is a noun in simple words?
 
@@ -214,7 +214,7 @@ Yes, it is an abstract noun.
 
 ---
 
-## Conclusion {#conclusion}
+## Conclusion
 
 Noun is the foundation of English grammar. It helps us identify everything around us. By understanding types of nouns and practicing examples, you can easily improve your grammar and sentence formation skills.
 

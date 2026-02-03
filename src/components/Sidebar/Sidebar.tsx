@@ -1,31 +1,36 @@
 "use client";
 
-import { sidebarConfig } from "@/data/sidebar";
+import { sidebarConfig, SidebarItem } from "@/data/sidebar";
 import { useMobileSidebar } from "@/context/MobileSidebarContext";
 import { useEffect, useState } from "react";
 import "./sidebar.css";
 
-type Section = "grammar";
-type Page = "leftsidebar_grammar" | "option_A" | "option7" | "option4";
+type Section = keyof typeof sidebarConfig;
 
-export default function Sidebar({ section, page }: { section: Section; page: Page }) {
-  const { setOpen, activeTopic } = useMobileSidebar();
+export type Page =| "leftsidebar_grammar" | "leftsidebar_startSpeaking";
 
-  const [clickedId, setClickedId] = useState<string>("");
-  const [scrollId, setScrollId] = useState<string>("");
+export default function Sidebar({
+  section,
+  page,
+}: {
+  section: Section;
+  page: Page;
+}) {
+  const { setOpen } = useMobileSidebar();
 
-  let currentSection = section;
-  let currentPage = page;
+  const [clickedId, setClickedId] = useState("");
+  const [scrollId, setScrollId] = useState("");
 
-  if (activeTopic === "grammar") currentPage = "leftsidebar_grammar";
-  if (activeTopic === "optionA") currentPage = "option_A";
-  if (activeTopic === "option7") currentPage = "option7";
-  if (activeTopic === "option4") currentPage = "option4";
+  // ✅ SAFE assertion (TypeScript limitation workaround)
+  const items = (sidebarConfig as Record<
+    Section,
+    Record<Page, SidebarItem[]>
+  >)[section][page];
 
-  const items = sidebarConfig[currentSection][currentPage];
-
-  // Scroll spy logic
+  // Scroll spy
   useEffect(() => {
+    if (!items || !items.length) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -48,8 +53,8 @@ export default function Sidebar({ section, page }: { section: Section; page: Pag
   return (
     <div className="sidebar">
       {items.map((item) => {
-        const isClicked = clickedId === item.id;
-        const isScroll = scrollId === item.id && !isClicked;
+        const isActive =
+          clickedId === item.id || scrollId === item.id;
 
         return (
           <a
@@ -59,10 +64,9 @@ export default function Sidebar({ section, page }: { section: Section; page: Pag
               setClickedId(item.id);
               setOpen(false);
             }}
-            className={`sidebar-item 
-              ${isClicked ? "active-clicked" : ""}
-              ${isScroll ? "active-scroll" : ""}
-            `}
+            className={`sidebar-item ${
+              isActive ? "active-scroll" : ""
+            }`}
           >
             <span className="indicator" />
             {item.label}
@@ -72,3 +76,4 @@ export default function Sidebar({ section, page }: { section: Section; page: Pag
     </div>
   );
 }
+
