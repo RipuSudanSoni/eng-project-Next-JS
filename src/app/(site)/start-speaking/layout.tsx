@@ -13,7 +13,7 @@ export default function StartSpeakingLayout({
     <>
      <MobileSidebarDrawer />
       <Layout3Column
-        sidebar={<Sidebar section="startSpeaking" page="leftsidebar_startSpeaking" />}
+        sidebar={<Sidebar section="startSpeaking" />}
         content={children}
       />
     </>
