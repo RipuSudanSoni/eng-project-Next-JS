@@ -1,82 +1,81 @@
-// export const sidebarConfig = {
-//  grammar: {
+// export type SidebarItem = {
+//   id: string;
+//   label: string;
+// };
 
-//  // spokenEnglish: {
+// export type SidebarConfig = {
+//   grammar: {
+//     leftsidebar_grammar: SidebarItem[];
+//     leftsidebar_noun: SidebarItem[];
+//     leftsidebar_verb: SidebarItem[];
+//   };
+//   startSpeaking: {
+//     leftsidebar_startSpeaking: SidebarItem[];
+//   };
+// };
 
+// export const sidebarConfig: SidebarConfig = {
+//   grammar: {
+//     /* =====================
+//        GRAMMAR
+//     ===================== */
 //     leftsidebar_grammar: [
-//       { id: "types-of-grammar", label: "types of grammar" },
-//       { id: "use-of-grammar", label: "use of grammar" },
-//       { id: "way-to-learn-of-grammar", label: "way to learn of grammar" },
-
-//       // tense
-//       { id: "tenses-in-spoken-english", label: "Tenses in Spoken English"},
-//       { id: "what-is-tense", label: "What is Tense"},
-//       { id: "present-tense", label: "Present Tense" },
-//       { id: "present-simple-use", label: "Present Simple Tense" },
-//       { id: "present-continuous-tense", label: "Present Continuous Tense" },
-//       { id: "present-perfect-tense", label: "Present Perfect Tense" },
-//       { id: "past-tense", label: "Past Tense" },
-//       { id: "future-tense", label: "Future Tense" },
-
-//       // verb
-//       { id: "types", label: "Types of Verbs" },
-//       { id: "examples", label: "Examples" },
+//       { id: "what-is-grammar", label: "What is Grammar?" },
+//       { id: "importance-of-grammar", label: "Importance of Grammar" },
+//       { id: "types-of-grammar", label: "Types of Grammar" },
+//       { id: "grammar-in-spoken-english", label: "Grammar in Spoken English" },
+//       { id: "basic-grammar-topics", label: "Basic Grammar Topics" },
+//       { id: "common-grammar-mistakes", label: "Common Grammar Mistakes" },
+//       { id: "practice-section", label: "Practice Section" },
+//       { id: "faq", label: "FAQ" },
+//       { id: "conclusion", label: "Conclusion" },
 //     ],
 
-//     option_A: [
-//       { id: "Options_A_H", label: "Options A H" },
-//       { id: "Options_A_H1", label: "Options A H1" },
-//       { id: "Options_A_H2", label: "Options A H2" },
-//       { id: "Options_A_H3", label: "Options A H3" },
-
-//       { id: "Options_A1_H1", label: "Options A1 H1" },
-//       { id: "Options_A1_H2", label: "Options A1 H2" },
-//       { id: "Options_A1_H3", label: "Options A1 H3" },
-
-//       { id: "Options_A2_H1", label: "Options A2 H1" },
-//       { id: "Options_A2_H2", label: "Options A2 H2" },
-
-
-//       //dumy side bar link to test scrolling
-//       { id: "Options_A1_H1", label: "Options A1 H1" },
-//       { id: "Options_A1_H2", label: "Options A1 H2" },
-//       { id: "Options_A1_H3", label: "Options A1 H3" },
-
-//       { id: "Options_A2_H1", label: "Options A2 H1" },
-//       { id: "Options_A2_H2", label: "Options A2 H2" },
-
-//       { id: "Options_A1_H1", label: "Options A1 H1" },
-//       { id: "Options_A1_H2", label: "Options A1 H2" },
-//       { id: "Options_A1_H3", label: "Options A1 H3" },
-
-//       { id: "Options_A2_H1", label: "Options A2 H1" },
-//       { id: "Options_A2_H2", label: "Options A2 H2" },
+//     /* =====================
+//        NOUN
+//     ===================== */
+//     leftsidebar_noun: [
+//       { id: "what-is-a-noun", label: "What is a Noun?" },
+//       { id: "importance-of-noun-in-spoken-english", label: "Importance of Noun" },
+//       { id: "use-of-noun-in-spoken-english", label: "Use of Noun in Speaking" },
+//       { id: "types-of-noun", label: "Types of Noun" },
+//       { id: "rules-of-using-noun", label: "Rules of Using Noun" },
+//       { id: "common-mistakes", label: "Common Mistakes" },
+//       { id: "practice-section", label: "Practice Section" },
+//       { id: "faq", label: "FAQ" },
+//       { id: "conclusion", label: "Conclusion" },
 //     ],
 
-//     option4: [
-//       { id: "Options_4_H", label: "Options 4 H" },
-//       { id: "Options_4_H1", label: "Options 4 H1" },
-//       { id: "Options_4_H2", label: "Options 4 H2" },
-//       { id: "Options_4_H3", label: "Options 4 H3" },
-//      ],
-
-//      option7: [
-//       { id: "Options_7_H", label: "Options 7 H" },
-//       { id: "Options_7_H1", label: "Options 7 H1" },
-//       { id: "Options_7_H2", label: "Options 7 H2" },
-//       { id: "Options_7_H3", label: "Options 7 H3" },
-//      ],
+//     /* =====================
+//        VERB
+//     ===================== */
+//     leftsidebar_verb: [
+//       { id: "what-is-a-verb", label: "What is a Verb?" },
+//       { id: "importance-of-verb-in-spoken-english", label: "Importance of Verb" },
+//       { id: "use-of-verb-in-spoken-english", label: "Use of Verb in Speaking" },
+//       { id: "types-of-verb", label: "Types of Verb" },
+//       { id: "verb-forms", label: "Verb Forms (V1, V2, V3)" },
+//       { id: "helping-verbs", label: "Helping Verbs" },
+//       { id: "common-verb-mistakes", label: "Common Mistakes" },
+//       { id: "practice-section", label: "Practice Section" },
+//       { id: "faq", label: "FAQ" },
+//       { id: "conclusion", label: "Conclusion" },
+//     ],
 //   },
 
+//   /* =====================
+//      START SPEAKING
+//   ===================== */
 //   startSpeaking: {
-//   leftsidebar_startSpeaking: [
-//     { id: "introduction", label: "Introduction" },
-//     { id: "daily-use-sentences", label: "Daily Use Sentences" },
-//     { id: "how-to-start-speaking", label: "How to Start Speaking" },
-//     { id: "common-mistakes", label: "Common Mistakes" },
-//   ],
-// },  
-// };
+//     leftsidebar_startSpeaking: [
+//       { id: "introduction", label: "Introduction" },
+//       { id: "daily-use-sentences", label: "Daily Use Sentences" },
+//       { id: "how-to-start-speaking", label: "How to Start Speaking" },
+//       { id: "common-mistakes", label: "Common Mistakes" },
+//     ],
+//   },
+// } as const;
+
 
 
 
@@ -87,39 +86,72 @@ export type SidebarItem = {
 };
 
 export type SidebarConfig = {
-  grammar: {
-    leftsidebar_grammar: SidebarItem[];
-  };
-  startSpeaking: {
-    leftsidebar_startSpeaking: SidebarItem[];
+  [section: string]: {
+    sidebar: SidebarItem[];
   };
 };
 
 export const sidebarConfig: SidebarConfig = {
   grammar: {
-    leftsidebar_grammar: [
+    sidebar: [
+      /* GRAMMAR */
+      { id: "what-is-grammar", label: "What is Grammar?" },
+      { id: "importance-of-grammar", label: "Importance of Grammar" },
       { id: "types-of-grammar", label: "Types of Grammar" },
-      { id: "use-of-grammar", label: "Use of Grammar" },
-      { id: "way-to-learn-of-grammar", label: "Way to Learn Grammar" },
+      { id: "grammar-in-spoken-english", label: "Grammar in Spoken English" },
+      { id: "basic-grammar-topics", label: "Basic Grammar Topics" },
+      { id: "common-grammar-mistakes", label: "Common Grammar Mistakes" },
+      { id: "practice-section", label: "Practice Section" },
+      { id: "faq", label: "FAQ" },
+      { id: "conclusion", label: "Conclusion" },
 
-      { id: "tenses-in-spoken-english", label: "Tenses in Spoken English" },
+      /* NOUN */
+      { id: "what-is-a-noun", label: "What is a Noun?" },
+      { id: "importance-of-noun-in-spoken-english", label: "Importance of Noun" },
+      { id: "use-of-noun-in-spoken-english", label: "Use of Noun in Speaking" },
+      { id: "types-of-noun", label: "Types of Noun" },
+      { id: "rules-of-using-noun", label: "Rules of Using Noun" },
+      { id: "common-mistakes", label: "Common Mistakes" },
+      { id: "practice-section", label: "Practice Section" },
+      { id: "faq", label: "FAQ" },
+      { id: "conclusion", label: "Conclusion" },
+
+      /* VERB */
+      { id: "what-is-a-verb", label: "What is a Verb?" },
+      { id: "importance-of-verb-in-spoken-english", label: "Importance of Verb" },
+      { id: "use-of-verb-in-spoken-english", label: "Use of Verb in Speaking" },
+      { id: "types-of-verb", label: "Types of Verb" },
+      { id: "verb-forms", label: "Verb Forms (V1, V2, V3)" },
+      { id: "helping-verbs", label: "Helping Verbs" },
+      { id: "common-verb-mistakes", label: "Common Mistakes" },
+      { id: "practice-section", label: "Practice Section" },
+      { id: "faq", label: "FAQ" },
+      { id: "conclusion", label: "Conclusion" },
+
+      /* TENSE */
       { id: "what-is-tense", label: "What is Tense"},
       { id: "present-tense", label: "Present Tense" },
       { id: "present-simple-use", label: "Present Simple Tense" },
       { id: "past-tense", label: "Past Tense" },
       { id: "future-tense", label: "Future Tense" },
-
       { id: "types", label: "Types of Verbs" },
       { id: "examples", label: "Examples" },
     ],
   },
 
   startSpeaking: {
-    leftsidebar_startSpeaking: [
+    sidebar: [
       { id: "introduction", label: "Introduction" },
       { id: "daily-use-sentences", label: "Daily Use Sentences" },
       { id: "how-to-start-speaking", label: "How to Start Speaking" },
-      { id: "common-mistakes", label: "Common Mistakes" },
     ],
   },
-} as const;;
+
+  // 🔥 future ready
+  vocabulary: {
+    sidebar: [
+      { id: "daily-words", label: "Daily Words" },
+      { id: "phrasal-verbs", label: "Phrasal Verbs" },
+    ],
+  },
+};

@@ -40,7 +40,6 @@ export default function MobileSidebarDrawer() {
         {activeSidebar && (
           <Sidebar
             section={activeSidebar.section}
-            page={activeSidebar.page}
           />
         )}
       </div>

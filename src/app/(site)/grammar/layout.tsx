@@ -12,7 +12,7 @@ export default function GrammarLayout({
     <>
       <MobileSidebarDrawer />
       <Layout3Column
-        sidebar={<Sidebar section="grammar" page="leftsidebar_grammar" />}
+        sidebar={<Sidebar section="grammar" />}
         content={children}
       />
     </>

@@ -1,35 +1,22 @@
 "use client";
 
-import { sidebarConfig, SidebarItem } from "@/data/sidebar";
+import { sidebarConfig } from "@/data/sidebar";
 import { useMobileSidebar } from "@/context/MobileSidebarContext";
 import { useEffect, useState } from "react";
 import "./sidebar.css";
 
 type Section = keyof typeof sidebarConfig;
 
-export type Page =| "leftsidebar_grammar" | "leftsidebar_startSpeaking";
-
-export default function Sidebar({
-  section,
-  page,
-}: {
-  section: Section;
-  page: Page;
-}) {
+export default function Sidebar({ section }: { section: Section }) {
   const { setOpen } = useMobileSidebar();
+
+  const items = sidebarConfig[section].sidebar;
 
   const [clickedId, setClickedId] = useState("");
   const [scrollId, setScrollId] = useState("");
 
-  // ✅ SAFE assertion (TypeScript limitation workaround)
-  const items = (sidebarConfig as Record<
-    Section,
-    Record<Page, SidebarItem[]>
-  >)[section][page];
-
-  // Scroll spy
   useEffect(() => {
-    if (!items || !items.length) return;
+    if (!items.length) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -52,28 +39,19 @@ export default function Sidebar({
 
   return (
     <div className="sidebar">
-      {items.map((item) => {
-        const isActive =
-          clickedId === item.id || scrollId === item.id;
-
-        return (
-          <a
-            key={item.id}
-            href={`#${item.id}`}
-            onClick={() => {
-              setClickedId(item.id);
-              setOpen(false);
-            }}
-            className={`sidebar-item ${
-              isActive ? "active-scroll" : ""
-            }`}
-          >
-            <span className="indicator" />
-            {item.label}
-          </a>
-        );
-      })}
+      {items.map((item) => (
+        <a
+          key={item.id}
+          href={`#${item.id}`}
+          onClick={() => setOpen(false)}
+          className={`sidebar-item ${
+            scrollId === item.id ? "active-scroll" : ""
+          }`}
+        >
+          <span className="indicator" />
+          {item.label}
+        </a>
+      ))}
     </div>
   );
 }
-
