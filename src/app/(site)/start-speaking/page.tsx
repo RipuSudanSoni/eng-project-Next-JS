@@ -1,10 +1,14 @@
 import { loadMarkdown } from "@/lib/loadMarkdown";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
+import SetSidebarItems from "@/components/Sidebar/SetSidebarItems";
 
 export default function GrammarIndexPage() {
-  const { content } = loadMarkdown("start-speaking", "start-speaking");
+  const { content, headings } = loadMarkdown("start-speaking", "start-speaking");
 
   return (
-    <MarkdownRenderer content={content} />
+    <>
+      <SetSidebarItems items={headings} />
+      <MarkdownRenderer content={content} />
+    </>
   );
 }
