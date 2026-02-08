@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { loadMarkdown } from "@/lib/loadMarkdown";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
+import SetSidebarItems from "@/components/Sidebar/SetSidebarItems";
 
 type PageProps = {
   params: {
@@ -26,9 +27,14 @@ export async function generateMetadata({
 export default function StartSpeakingPage({ params }: PageProps) {
   const { slug } = params;
 
-  const { content } = loadMarkdown("start-speaking", slug);
+  const { content, headings } = loadMarkdown("start-speaking", slug);
 
   if (!content) notFound();
 
-  return <MarkdownRenderer content={content} />;
+  return (
+    <>
+      <SetSidebarItems items={headings} />
+      <MarkdownRenderer content={content} />
+    </>
+  );
 }

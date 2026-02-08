@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import "./mobileSidebar.css";
 
 export default function MobileSidebarDrawer() {
-  const { open, setOpen, sidebarItems } = useMobileSidebar(); // ✅ sidebarItems लिए
+  const { open, setOpen, sidebarItems } = useMobileSidebar();
   
   return (
     <>
@@ -21,8 +21,7 @@ export default function MobileSidebarDrawer() {
           </button>
         </div>
         
-        {/* ✅ Context से items लिए */}
-        <Sidebar items={sidebarItems} />
+         <Sidebar />
       </div>
     </>
   );
