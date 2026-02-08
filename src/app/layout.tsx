@@ -1,6 +1,7 @@
 import "./globals.css";
 import "../styles/markdown.css";
 import { MobileSidebarProvider } from "@/context/MobileSidebarContext";
+import ErrorBoundary from "@/components/ErrorHandling/ErrorBoundary";
 
 export default function RootLayout({
   children,
@@ -10,9 +11,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <MobileSidebarProvider>
-          {children}
-        </MobileSidebarProvider>
+        <ErrorBoundary>
+          <MobileSidebarProvider>
+            {children}
+          </MobileSidebarProvider>
+        </ErrorBoundary>
       </body>
     </html>
   );

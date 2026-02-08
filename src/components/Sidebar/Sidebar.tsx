@@ -11,7 +11,7 @@ interface SidebarProps {
 
 export default function Sidebar({ items: propItems }: SidebarProps) {
   const { setOpen, sidebarItems } = useMobileSidebar();
-  
+
   const items = propItems || sidebarItems || [];
 
   const [clickedId, setClickedId] = useState("");
@@ -28,7 +28,7 @@ export default function Sidebar({ items: propItems }: SidebarProps) {
           }
         });
       },
-      { rootMargin: "-40% 0px -50% 0px" }
+      { rootMargin: "-40% 0px -50% 0px" },
     );
 
     items.forEach((item) => {
@@ -41,14 +41,13 @@ export default function Sidebar({ items: propItems }: SidebarProps) {
 
   return (
     <div className="sidebar">
-      {items.map((item) => (
+
+      {items.map((item, index) => (
         <a
-          key={item.id}
+          key={`${item.id}-${index}`}
           href={`#${item.id}`}
           onClick={() => setOpen(false)}
-          className={`sidebar-item ${
-            scrollId === item.id ? "active-scroll" : ""
-          }`}
+          className={`sidebar-item ${scrollId === item.id ? "active-scroll" : ""}`}
         >
           <span className="indicator" />
           {item.label}

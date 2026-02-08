@@ -6,6 +6,20 @@ import HeaderItem from "./HeaderItem";
 import { useMobileSidebar } from "@/context/MobileSidebarContext";
 import "./Header.css";
 
+// ✅ Step 1: dynamic import ऐड करें
+import dynamic from 'next/dynamic';
+
+// ✅ Step 2: MobileSidebarDrawer को dynamically import करें
+const MobileSidebarDrawer = dynamic(
+  () => import('@/components/Sidebar/MobileSidebarDrawer'),
+  { 
+    ssr: false, 
+    loading: () => (
+      <div style={{ display: 'none' }}>Loading sidebar...</div>
+    )
+  }
+);
+
 export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [anchorRect, setAnchorRect] = useState<DOMRect | null>(null);
@@ -61,10 +75,12 @@ export default function Header() {
         </nav>
       </header>
 
+
+      <MobileSidebarDrawer />
+
       {/* ===== MOBILE SIDEBAR TOGGLE ===== */}
       {isMobile && (
         <div className="mobile-toggle-container">
-
           <button
             className={`mobile-menu-btn ${open ? "open" : ""}`}
             onClick={() => setOpen(!open)}
