@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { extractHeadingsFromMarkdown } from "./extractHeadings";
 
 type MarkdownMeta = {
   title?: string;
@@ -20,8 +21,12 @@ export function loadMarkdown(folder: string, slug: string) {
   const file = fs.readFileSync(filePath, "utf-8");
   const { data, content } = matter(file);
 
+  // Extract headings from content
+  const headings = extractHeadingsFromMarkdown(content);
+
   return {
     meta: data as MarkdownMeta,
     content,
+    headings,
   };
 }
